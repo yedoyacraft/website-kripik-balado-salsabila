@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Kripik Balado Salsabila — Responsive
+   Breakpoint:
+   - <= 1000px : tablet / layar sedang
+   - <= 760px  : mobile
+   - reduced-motion : matikan animasi
+   ========================================================================== */
+
+/* Tablet -------------------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .container {
+    width: calc(100% - 88px);
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .about-grid,
+  .contact-grid {
+    gap: 45px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-visual {
+    min-height: 450px;
+  }
+
+  .hero-image-wrap {
+    height: 430px;
+  }
+
+  .floating-card {
+    left: -10px;
+  }
+
+  .hero-sticker {
+    right: -15px;
+  }
+
+  .product-grid,
+  .catalog-grid {
+    gap: 18px;
+  }
+
+  .product-image {
+    height: 290px;
+  }
+
+  .footer-links {
+    gap: 45px;
+  }
+}
+
+/* Mobile -------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .section-pad {
+    padding: 75px 0;
+  }
+
+  .announcement-bar {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-wrapper {
+    height: 72px;
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 3;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 15px 18px 25px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav > a:not(.nav-cta) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-nav > a:not(.nav-cta)::after {
+    display: none;
+  }
+
+  .nav-cta {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .hero-grid,
+  .intro-grid,
+  .story-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-proof {
+    margin-top: 35px;
+  }
+
+  .hero-visual {
+    min-height: 400px;
+  }
+
+  .hero-image-wrap {
+    width: 290px;
+    height: 370px;
+  }
+
+  .hero-label {
+    left: -20px;
+    top: 20px;
+  }
+
+  .hero-sticker {
+    right: -25px;
+    bottom: 25px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .hero-sticker span {
+    font-size: 11px;
+  }
+
+  .hero-sticker strong {
+    font-size: 19px;
+  }
+
+  .floating-card {
+    left: 0;
+    bottom: 0;
+  }
+
+  .hero-orbit {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+
+  .intro-grid {
+    margin-bottom: 40px;
+  }
+
+  .intro-copy {
+    padding-top: 0;
+  }
+
+  .intro-copy p {
+    font-size: 16px;
+  }
+
+  .feature-grid,
+  .product-grid,
+  .catalog-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 250px;
+  }
+
+  .section-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+  }
+
+  .product-image {
+    height: 330px;
+  }
+
+  .story-image img {
+    height: 390px;
+  }
+
+  .story-copy p {
+    font-size: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-large {
+    grid-column: span 2;
+  }
+
+  .gallery-item img,
+  .gallery-large img {
+    height: 250px;
+  }
+
+  .gallery-large img {
+    height: 330px;
+  }
+
+  .cta-section {
+    padding: 80px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 55px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 45px;
+    padding-bottom: 45px;
+  }
+
+  .footer-links {
+    gap: 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page-hero {
+    padding: 70px 0;
+  }
+
+  .page-hero h1 {
+    font-size: 58px;
+  }
+
+  .page-hero::after {
+    font-size: 230px;
+    top: 0;
+  }
+
+  .catalog-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .modal-card {
+    padding: 20px;
+  }
+
+  .modal-product {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .modal-product img {
+    height: 260px;
+  }
+
+  .modal-product-copy {
+    padding: 10px;
+  }
+
+  .modal-product-copy h2 {
+    font-size: 38px;
+  }
+
+  .full-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .full-gallery-grid .gallery-large {
+    grid-row: auto;
+  }
+
+  .full-gallery-grid .gallery-item img,
+  .full-gallery-grid .gallery-large img {
+    height: 350px;
+  }
+
+  .map-card {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+
+  .map-placeholder {
+    height: 200px;
+  }
+
+  .floating-wa {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .floating-wa span {
+    display: none;
+  }
+}
+
+/* Reduced motion ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal,
+  .page-fade {
+    opacity: 1;
+    transform: none;
+  }
+}

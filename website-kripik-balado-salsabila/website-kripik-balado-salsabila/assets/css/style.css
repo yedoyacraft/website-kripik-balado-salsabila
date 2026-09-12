@@ -1,0 +1,192 @@
+/* ==========================================================================
+   Kripik Balado Salsabila — Base & Layout
+   Struktur:
+   1. Design tokens (variabel)
+   2. Reset & dasar
+   3. Utilitas & layout container
+   4. Tipografi umum
+   5. Tombol & link
+   ========================================================================== */
+
+/* 1. Design tokens ---------------------------------------------------------- */
+:root {
+  --red: #a9231d;
+  --red-dark: #7e1815;
+  --cream: #f7f3eb;
+  --cream-dark: #eee7da;
+  --ink: #1d1b19;
+  --muted: #756f68;
+  --line: #ddd6cb;
+  --gold: #c69a52;
+  --white: #fff;
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+
+  --shadow-sm: 0 8px 25px rgba(59, 26, 12, 0.06);
+  --shadow-md: 0 18px 40px rgba(48, 18, 13, 0.12);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --transition: 0.3s var(--ease);
+}
+
+/* 2. Reset & dasar ---------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Beri jarak agar target anchor tidak tertutup header sticky */
+section[id],
+[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 3. Utilitas & layout ------------------------------------------------------ */
+.container {
+  width: min(1120px, calc(100% - 140px));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding: 110px 0;
+}
+
+/* 4. Tipografi umum --------------------------------------------------------- */
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(42px, 4.5vw, 65px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+h2 em {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 23px;
+}
+
+.eyebrow > span {
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+}
+
+.eyebrow.light {
+  color: #f5d8a0;
+}
+
+/* 5. Tombol & link ---------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 23px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.btn span {
+  margin-left: 12px;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn-light {
+  background: #fff;
+  color: var(--red);
+}
+
+.btn-light:hover {
+  background: #f8e7c7;
+  transform: translateY(-2px);
+}
+
+.text-link {
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(169, 35, 29, 0.33);
+  padding-bottom: 5px;
+  color: var(--red);
+  transition: border-color var(--transition);
+}
+
+.text-link:hover {
+  border-color: var(--red);
+}
+
+.text-link span {
+  margin-left: 13px;
+  font-size: 18px;
+  vertical-align: -2px;
+}
