@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Katalog produk Kripik Balado Salsabila.">
+  <title>Produk | Kripik Balado Salsabila</title>
+  <link rel="icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/components.css?v=2">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=2">
+</head>
+
+<body>
+  <div class="announcement-bar">Oleh-oleh khas Padang dengan rasa yang selalu dirindukan</div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html" aria-label="Kripik Balado Salsabila">
+        <span class="brand-mark"><img src="assets/images/logo.png" alt="Logo Kripik Balado Salsabila"></span>
+        <span class="brand-text"><strong>Salsabila</strong><small>KRIPIK BALADO</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a class="active" href="produk.html">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <a class="nav-cta" href="https://wa.me/6282172111127?text=Halo%20Kripik%20Balado%20Salsabila,%20saya%20ingin%20memesan%20produk." target="_blank" rel="noopener noreferrer">Pesan Sekarang <span>&#8599;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-fade">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow"><span></span> Katalog Salsabila</div>
+        <h1>Pilih rasa<br><em>favoritmu.</em></h1>
+        <p>Temukan pilihan camilan khas Padang untuk menemani hari atau menjadi buah tangan istimewa.</p>
+      </div>
+    </section>
+
+    <section class="section-pad catalog-section">
+      <div class="container catalog-toolbar">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="active" data-filter="all">Semua</button>
+          <button data-filter="balado">Balado</button>
+          <button data-filter="oleh-oleh">Oleh-oleh</button>
+          <button data-filter="paket">Paket</button>
+        </div>
+        <div class="catalog-count"><span id="productCount">0</span> produk</div>
+      </div>
+      <div class="container product-grid catalog-grid" id="productGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark"><img src="assets/images/logo.png" alt="Logo Kripik Balado Salsabila"></span>
+          <span class="brand-text"><strong>Salsabila</strong><small>KRIPIK BALADO</small></span>
+        </a>
+        <p>Cita rasa khas Padang, dikemas untuk menemani setiap cerita.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/kripikbaladosalsabila/" target="_blank" rel="noopener noreferrer">Instagram &#8599;</a>
+          <a href="https://www.tiktok.com/@kripikbaladosalsabila15" target="_blank" rel="noopener noreferrer">TikTok &#8599;</a>
+          <a href="https://shopee.co.id/kripikbaladosalsabila15" target="_blank" rel="noopener noreferrer">Shopee &#8599;</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigasi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="tentang.html">Tentang Kami</a>
+          <a href="produk.html">Produk</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div>
+          <h4>Hubungi</h4>
+          <p>Padang, Sumatera Barat<br>Indonesia</p>
+          <a href="mailto:kripikbaladosalsabila15@gmail.com">kripikbaladosalsabila15@gmail.com</a>
+          <a href="https://wa.me/6282172111127" target="_blank" rel="noopener noreferrer">+62 821-7211-1127</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="currentYear"></span> Kripik Balado Salsabila.</span>
+      <span>Dibuat dengan rasa dan cerita.</span>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/6282172111127?text=Halo%20Kripik%20Balado%20Salsabila%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    &#9993;<span>Chat dengan kami</span>
+  </a>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal aria-label="Tutup">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/produk.js?v=3"></script>
+</body>
+
+</html>
